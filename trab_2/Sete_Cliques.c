@@ -24,8 +24,15 @@ int main(void){
 	}
 
 	// Sorteia um dos links para ser acessado.
-	int random = rand() % links_readed;
-
+	if(links_readed > 0)
+	{
+		int random = rand() % links_readed;
+	}
+	else
+	{
+		//printf("\nNenhum link encontrado na pagina!);
+		return;
+	}
 	printf("\nLINK SORTEADO: %s\n",links[random]);
 
 	/* we're done with libcurl, so clean it up */
